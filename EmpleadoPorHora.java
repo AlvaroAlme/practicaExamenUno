@@ -33,4 +33,11 @@ public class EmpleadoPorHora extends Empleado {
         double salarioPorHoras = getHorasTrabajadas() * getPagoPorHora();
         return salarioPorHoras;
     }
+
+    @Override
+    public String toString() {
+        return "EmpleadoPorHora [horasTrabajadas=" + horasTrabajadas + ", pagoPorHora=" + pagoPorHora +  super.toString() + "]";
+    }
+
+    
 }

@@ -23,4 +23,11 @@ public class EmpleadoFijo extends Empleado {
     public double calcularSalario(){
         return getSalarioMensual();
     }
+
+    @Override
+    public String toString() {
+        return "EmpleadoFijo [salarioMensual=" + salarioMensual + super.toString() + "]";
+    }
+
+    
 }

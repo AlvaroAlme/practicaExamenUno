@@ -60,23 +60,17 @@ public class Empresa {
 
     }
 
-    public void guardarEmpleadosEnFichero(String ruta) throws IOException {
-    try {
-        
-        FileWriter fileWriter = new FileWriter(ruta);
-        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-
+    public void guardarEmpleadosEnFichero(String ruta) throws IOException{
+    try (FileWriter fileWriter = new FileWriter(ruta);
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);){
         
         for (Empleado e : empleados) {
             bufferedWriter.write(e.toString());
             bufferedWriter.newLine();
         }
 
-        
         bufferedWriter.close();
 
-    } catch (IOException e) {
-        System.err.println("Error al guardar empleados en el fichero: " + e.getMessage());
-    }
+    } 
 }
 }

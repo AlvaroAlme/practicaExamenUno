@@ -13,13 +13,13 @@ public class Main {
 
              switch (opcion) {
                 case 1:
-                    
+                    cargarEmpleado(empresa, ruta);
                     break;
                 case 2:
-                    
+                    mostrarNominas(empresa);
                     break;
                 case 3:
-                    
+                    añadirEmpleado(empresa, ruta);
                     break;
                 case 4:
                     System.out.println("Hasta otra!");
@@ -44,7 +44,7 @@ public class Main {
         empresa.mostrarNominas();
     }
 
-    public static void añadirEmpleado(Empresa empresa, String ruta) throws IOException {
+    public static void añadirEmpleado(Empresa empresa, String ruta) {
 
         Empleado empleado = null;
 
@@ -76,13 +76,12 @@ public class Main {
         }
 
         empresa.agregarEmpleado(empleado);
-
-        try {
-            ruta = Menu.preguntarTexto("Intriduce la ruta del archivo que deseas sobreescribir: ");
-            empresa.guardarEmpleadosEnFichero(ruta);
-            System.out.println("datos guardados correctamente");
-        } catch (IOException e){
-            System.err.println("No se pudo guardar el archivo correctamente " + e.getMessage());
+        try{
+        empresa.guardarEmpleadosEnFichero(ruta);
+        System.out.println("datos guardados correctamente");
+        }catch (IOException e) {
+            System.err.println("El archivo no se pudo guardar correctamente " + e.getMessage());
         }
     }
+    
 }

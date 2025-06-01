@@ -26,7 +26,7 @@ public class EmpleadoFijo extends Empleado {
 
     @Override
     public String toString() {
-        return "EmpleadoFijo [salarioMensual=" + salarioMensual + super.toString() + "]";
+        return "Fijo, " + getNombre() + "," + getSalarioMensual();
     }
 
     

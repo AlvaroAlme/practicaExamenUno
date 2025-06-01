@@ -55,6 +55,7 @@ public class Empresa {
                 }
 
                 linea = bufferedReader.readLine();
+                System.out.println(linea);
             }
         }
 

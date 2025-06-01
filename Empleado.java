@@ -20,7 +20,7 @@ public abstract class Empleado implements Pagable {
 
     @Override
     public String toString() {
-        return "Empleado [" + nombre + "]";
+        return "";
     }
 
     @Override

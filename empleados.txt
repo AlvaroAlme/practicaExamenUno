@@ -1,0 +1,2 @@
+Fijo, Alvaro Almecija,1300.0
+Hora, Ana Ato,85.0,12.0
